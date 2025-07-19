@@ -12,6 +12,9 @@ const { generate} = require('../controllers/openai.controller.js');
 
 const appRoutes = Router();
 
+appRoutes.get('/', (req, res) => {
+    res.send('Welcome to the Task Manager API');
+});
 appRoutes.post('/create-task', createTask);
 appRoutes.get('/tasks', getTasks);
 appRoutes.get('/tasks/:id', getTaskById);
