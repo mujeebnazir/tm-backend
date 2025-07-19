@@ -27,7 +27,7 @@ jobs:
           username: ${{ secrets.REMOTE_USER }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            cd taskmanager
+            cd taskmanager/tm-backend
             git pull origin main
             docker-compose down
             docker-compose build
